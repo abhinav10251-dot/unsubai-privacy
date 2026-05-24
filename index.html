@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnsubAI — Privacy Policy</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0d0d14;
+    color: #e0e0f0;
+    line-height: 1.7;
+    padding: 48px 24px;
+  }
+  .container { max-width: 680px; margin: 0 auto; }
+  .logo-row {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 40px;
+  }
+  .logo-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: linear-gradient(135deg, #ff3cac, #7b2fff);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-icon svg { width: 20px; height: 20px; }
+  .logo-text {
+    font-size: 22px; font-weight: 700;
+    background: linear-gradient(90deg, #ff3cac, #ffd60a, #06ffa5);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; color: #f0f0ff; }
+  .updated { font-size: 13px; color: rgba(240,240,255,0.4); margin-bottom: 40px; }
+  h2 {
+    font-size: 16px; font-weight: 600; color: #f0f0ff;
+    margin: 36px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  p { font-size: 15px; color: rgba(240,240,255,0.72); margin-bottom: 12px; }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  li { font-size: 15px; color: rgba(240,240,255,0.72); margin-bottom: 6px; }
+  .highlight {
+    background: rgba(255,60,172,0.08);
+    border: 1px solid rgba(255,60,172,0.2);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 24px 0;
+  }
+  .highlight p { color: rgba(240,240,255,0.85); margin: 0; }
+  a { color: #00b4d8; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+    color: rgba(240,240,255,0.35);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="logo-row">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </div>
+    <div class="logo-text">UnsubAI</div>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <div class="updated">Last updated: May 2026</div>
+
+  <div class="highlight">
+    <p>🔒 UnsubAI does not require inbox access, Google OAuth, or any login. We never read, store, or sell your emails.</p>
+  </div>
+
+  <h2>What we collect</h2>
+  <p><strong style="color:#f0f0ff">Gmail address hash</strong> — When you confirm your Gmail account, we store a one-way SHA-256 hash of your email address to enforce free tier limits (5 unsubscribes/month). This hash cannot be mathematically reversed to obtain your email address.</p>
+  <p><strong style="color:#f0f0ff">Email snippet</strong> — When you click Unsubscribe on an email, a short excerpt of that email (sender name, subject line, and unsubscribe link) is sent to our server and processed through Claude AI to identify the best unsubscribe URL. This content may appear in temporary server logs for up to 7 days.</p>
+  <p><strong style="color:#f0f0ff">Unsubscribe page content</strong> — The HTML of the unsubscribe page you are being redirected to is sent to Claude AI to determine what actions to take (clicking buttons, filling forms). This content is processed in real time and never stored.</p>
+
+  <h2>What we do NOT collect</h2>
+  <ul>
+    <li>We do not access your full inbox or any emails beyond the one you are actively unsubscribing from</li>
+    <li>We do not require Google OAuth or any form of login</li>
+    <li>We do not store your email content permanently</li>
+    <li>We do not collect passwords, payment details, or authentication data</li>
+    <li>We do not track your browsing history or web activity</li>
+    <li>We do not use cookies or cross-site tracking</li>
+  </ul>
+
+  <h2>How we use your data</h2>
+  <p>Data collected is used solely to provide the unsubscribe functionality:</p>
+  <ul>
+    <li>Your Gmail hash is used to count monthly unsubscribes and enforce free tier limits</li>
+    <li>Email snippets are used only to identify which unsubscribe URL to visit</li>
+    <li>Unsubscribe page HTML is used only to determine what buttons/forms to interact with</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <p>We use the following third-party services to operate UnsubAI:</p>
+  <ul>
+    <li><strong style="color:#f0f0ff">Anthropic Claude API</strong> — processes email snippets and unsubscribe page content to perform AI-powered unsubscribing. Anthropic's privacy policy applies to data sent through their API.</li>
+    <li><strong style="color:#f0f0ff">Supabase</strong> — stores anonymized usage counts (hashed Gmail address + count only). No email content is stored here.</li>
+    <li><strong style="color:#f0f0ff">Railway</strong> — hosts our backend server. Server logs may temporarily contain email snippets for up to 7 days.</li>
+  </ul>
+  <p>We do not sell, rent, or share your data with any other third parties.</p>
+
+  <h2>Data retention</h2>
+  <ul>
+    <li>Server logs: deleted automatically after 7 days</li>
+    <li>Usage counts: reset monthly, stored indefinitely as anonymous hashes</li>
+    <li>Email content: never stored — processed in real time only</li>
+  </ul>
+
+  <h2>Your rights</h2>
+  <p>You can request deletion of your usage data at any time by contacting us. Since we only store a hash of your email (not the email itself), please include your Gmail address in the request so we can identify and delete your record.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this privacy policy from time to time. Changes will be reflected on this page with an updated date.</p>
+
+  <h2>Contact</h2>
+  <p>For privacy questions or data deletion requests:<br>
+  <a href="mailto:abhinav10251@gmail.com">abhinav10251@gmail.com</a></p>
+
+  <div class="footer">
+    UnsubAI · Auto-unsubscribe powered by Claude AI
+  </div>
+
+</div>
+</body>
+</html>
